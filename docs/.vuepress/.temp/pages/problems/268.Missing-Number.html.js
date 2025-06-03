@@ -1,0 +1,16 @@
+import comp from "/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/problems/268.Missing-Number.html.vue"
+const data = JSON.parse("{\"path\":\"/problems/268.Missing-Number.html\",\"title\":\"268 Missing Number\",\"lang\":\"en-US\",\"frontmatter\":{},\"git\":{\"updatedTime\":1748760911000,\"contributors\":[{\"name\":\"fiona-meng\",\"username\":\"fiona-meng\",\"email\":\"fionameng2001@gmail.com\",\"commits\":2,\"url\":\"https://github.com/fiona-meng\"}],\"changelog\":[{\"hash\":\"57531dbb8da6cd2a5cd7b239f293defc116103d7\",\"time\":1748760911000,\"email\":\"fionameng2001@gmail.com\",\"author\":\"fiona-meng\",\"message\":\"Update 268\"},{\"hash\":\"704a048501cb0fe11cf00e913fb13a9cd08110bc\",\"time\":1748662905000,\"email\":\"fionameng2001@gmail.com\",\"author\":\"fiona-meng\",\"message\":\"Problem 268 post\"}]},\"filePathRelative\":\"problems/268.Missing-Number.md\"}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}
