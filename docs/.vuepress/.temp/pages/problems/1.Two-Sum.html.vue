@@ -9,7 +9,7 @@
 <p>Output: [0,1]</p>
 <p>Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].</p>
 <h2 id="brute-force" tabindex="-1"><a class="header-anchor" href="#brute-force"><span>Brute Force</span></a></h2>
-<p>Loop through each element x and find if there is another value y that equals to target - x</p>
+<p>Loop through each element x and find if there is another value y that equals to <code v-pre>target - x</code></p>
 <div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">def</span> <span class="token function">twoSum</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">:</span></span>
 <span class="line">    n <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span></span>
 <span class="line">    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
@@ -21,8 +21,8 @@
 <span class="line"></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div><h3 id="time-complexity" tabindex="-1"><a class="header-anchor" href="#time-complexity"><span>Time Complexity</span></a></h3>
 <ul>
-<li>Time Complexity: O(n^2)</li>
-<li>Space Complexity: o(1)</li>
+<li>Time Complexity: <code v-pre>O(n^2)</code></li>
+<li>Space Complexity: <code v-pre>O(1)</code></li>
 </ul>
 <h2 id="optimal-solution-1" tabindex="-1"><a class="header-anchor" href="#optimal-solution-1"><span>Optimal Solution 1</span></a></h2>
 <h3 id="intuition" tabindex="-1"><a class="header-anchor" href="#intuition"><span>Intuition</span></a></h3>

@@ -8,6 +8,7 @@ export const routes = Object.fromEntries([
   ["/problems/485.Max-Consecutive-Ones.html", { loader: () => import(/* webpackChunkName: "problems_485.Max-Consecutive-Ones.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/problems/485.Max-Consecutive-Ones.html.js"), meta: {"title":"485 Max Consecutive Ones"} }],
   ["/problems/560.Subarray-Sum-Equals-K.html", { loader: () => import(/* webpackChunkName: "problems_560.Subarray-Sum-Equals-K.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/problems/560.Subarray-Sum-Equals-K.html.js"), meta: {"title":"560 Subarray Sum Equals K"} }],
   ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/404.html.js"), meta: {"title":""} }],
+  ["/problems/75.Sort-Colors.html", { loader: () => import(/* webpackChunkName: "problems_75.Sort-Colors.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/problems/75.Sort-Colors.html.js"), meta: {"title":""} }],
 ]);
 
 if (import.meta.webpackHot) {
