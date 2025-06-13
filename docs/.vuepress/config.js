@@ -17,6 +17,7 @@ export default defineUserConfig({
           '/problems/136.Single-Number.md',
           '/problems/560.Subarray-Sum-Equals-K.md',
           '/problems/1.Two-Sum.md',
+          '/problems/75.Sort-Colors.md',
         ],
       },
     ],
