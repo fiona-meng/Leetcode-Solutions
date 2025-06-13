@@ -6,6 +6,7 @@ export default defineUserConfig({
   lang: 'en-US',
   title: 'LeetCode Solutions',
   description: 'My LeetCode Record',
+  base: '/Leetcode-Solutions/',
   theme: defaultTheme({
     sidebar: [
       {
