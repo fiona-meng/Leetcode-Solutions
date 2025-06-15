@@ -19,7 +19,9 @@ export default defineUserConfig({
           '/problems/560.Subarray-Sum-Equals-K.md',
           '/problems/1.Two-Sum.md',
           '/problems/75.Sort-Colors.md',
-          '/problems/169.Majority-Element.md'
+          '/problems/169.Majority-Element.md',
+          '/problems/53.Maximum-Subarray.md',
+          '/problems/Best-Time-to-Buy-and-Sell-Stock.md'
         ],
       },
     ],
