@@ -21,7 +21,9 @@ export default defineUserConfig({
           '/problems/75.Sort-Colors.md',
           '/problems/169.Majority-Element.md',
           '/problems/53.Maximum-Subarray.md',
-          '/problems/Best-Time-to-Buy-and-Sell-Stock.md'
+          '/problems/121.Best-Time-to-Buy-and-Sell-Stock.md',
+          '/problems/2149.Rearrange-Array-Elements-by-Sign.md',
+          '/problems/31.Next-Permutation.md'
         ],
       },
     ],
