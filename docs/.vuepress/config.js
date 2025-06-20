@@ -23,7 +23,9 @@ export default defineUserConfig({
           '/problems/53.Maximum-Subarray.md',
           '/problems/121.Best-Time-to-Buy-and-Sell-Stock.md',
           '/problems/2149.Rearrange-Array-Elements-by-Sign.md',
-          '/problems/31.Next-Permutation.md'
+          '/problems/31.Next-Permutation.md',
+          '/problems/73.Set-Matrix-Zeroes.md',
+          '/problems/48.Rotate-Image.md'
         ],
       },
     ],
