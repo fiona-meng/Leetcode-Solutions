@@ -25,7 +25,8 @@ export default defineUserConfig({
           '/problems/2149.Rearrange-Array-Elements-by-Sign.md',
           '/problems/31.Next-Permutation.md',
           '/problems/73.Set-Matrix-Zeroes.md',
-          '/problems/48.Rotate-Image.md'
+          '/problems/48.Rotate-Image.md',
+          '/problems/118.Pascal-Triangle.md'
         ],
       },
     ],
