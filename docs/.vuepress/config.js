@@ -27,7 +27,10 @@ export default defineUserConfig({
           '/problems/73.Set-Matrix-Zeroes.md',
           '/problems/48.Rotate-Image.md',
           '/problems/118.Pascal-Triangle.md',
-          '/problems/229.Majority-Element-II.md'
+          '/problems/229.Majority-Element-II.md',
+          '/problems/15.3Sum.md',
+          '/problems/56.Merge-Intervals.md',
+          '/problems/18.4Sum.md',
         ],
       },
     ],
