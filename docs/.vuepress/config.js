@@ -30,7 +30,7 @@ export default defineUserConfig({
           '/problems/229.Majority-Element-II.md',
           '/problems/15.3Sum.md',
           '/problems/56.Merge-Intervals.md',
-          '/problems/18.4Sum.md',
+          '/problems/18.4Sum.md'
         ],
       },
     ],
