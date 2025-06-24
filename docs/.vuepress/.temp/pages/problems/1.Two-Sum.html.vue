@@ -1,6 +1,6 @@
 <template><div><h1 id="_1-two-sum" tabindex="-1"><a class="header-anchor" href="#_1-two-sum"><span>1 Two Sum</span></a></h1>
 <h2 id="description" tabindex="-1"><a class="header-anchor" href="#description"><span>Description</span></a></h2>
-<p><a href="https://leetcode.cn/problems/two-sum" target="_blank" rel="noopener noreferrer">Problem: 1 Two Sum</a></p>
+<p><a href="https://leetcode.com/problems/two-sum" target="_blank" rel="noopener noreferrer">Problem: 1 Two Sum</a></p>
 <p>Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.</p>
 <p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
 <p>You can return the answer in any order.</p>
