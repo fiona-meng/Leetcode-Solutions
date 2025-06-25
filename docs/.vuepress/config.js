@@ -31,7 +31,10 @@ export default defineUserConfig({
           '/problems/15.3Sum.md',
           '/problems/56.Merge-Intervals.md',
           '/problems/18.4Sum.md',
-          '/problems/152.Maximum-Product-Subarray.md'
+          '/problems/152.Maximum-Product-Subarray.md',
+          '/problems/493.Reverse-Pairs.md',
+          '/problems/704.Binary-Search.md'
+          
         ],
       },
     ],
