@@ -33,7 +33,11 @@ export default defineUserConfig({
           '/problems/18.4Sum.md',
           '/problems/152.Maximum-Product-Subarray.md',
           '/problems/493.Reverse-Pairs.md',
-          '/problems/704.Binary-Search.md'
+          '/problems/704.Binary-Search.md',
+          '/problems/35.Search-Insert-Position.md',
+          '/problems/33.Search-in-Rotated-Sorted-Array.md',
+          '/problems/81.Search-in-Rotated-Sorted-Array-II.md',
+          '/problems/153.Find-Minimum-in-Rotated-Sorted-Array.md',
           
         ],
       },
