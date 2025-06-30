@@ -39,7 +39,8 @@ export default defineUserConfig({
           '/problems/81.Search-in-Rotated-Sorted-Array-II.md',
           '/problems/153.Find-Minimum-in-Rotated-Sorted-Array.md',
           '/problems/540.Single-Element-in-a-Sorted-Array.md',
-          
+          '/problems/162.Find-Peak-Element.md',
+          '/problems/875.Koko-Eating-Bananas.md',
         ],
       },
     ],
