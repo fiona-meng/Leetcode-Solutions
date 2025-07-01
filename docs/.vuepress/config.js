@@ -43,6 +43,13 @@ export default defineUserConfig({
           '/problems/875.Koko-Eating-Bananas.md',
         ],
       },
+      {
+        text: 'SQL Notebooks',
+        collapsible: true,
+        children: [
+          '/sql/sql_notebook.md',
+        ],
+      },
     ],
   }),
   bundler: viteBundler(),
