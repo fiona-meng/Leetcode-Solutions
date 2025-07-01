@@ -34,6 +34,8 @@ export const routes = Object.fromEntries([
   ["/problems/875.Koko-Eating-Bananas.html", { loader: () => import(/* webpackChunkName: "problems_875.Koko-Eating-Bananas.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/problems/875.Koko-Eating-Bananas.html.js"), meta: {"title":"875 Koko Eating Bananas"} }],
   ["/problems/88.Merge-Sorted-Array.html", { loader: () => import(/* webpackChunkName: "problems_88.Merge-Sorted-Array.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/problems/88.Merge-Sorted-Array.html.js"), meta: {"title":""} }],
   ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/404.html.js"), meta: {"title":""} }],
+  ["/problems/1482.Minimum-Number-of-Days-to-Make-m-Bouquets.html", { loader: () => import(/* webpackChunkName: "problems_1482.Minimum-Number-of-Days-to-Make-m-Bouquets.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/problems/1482.Minimum-Number-of-Days-to-Make-m-Bouquets.html.js"), meta: {"title":"1482 Minimum Number of Days to Make m Bouquets"} }],
+  ["/problems/1283.Find-the-Smallest-Divisor-Given-a-Threshold.html", { loader: () => import(/* webpackChunkName: "problems_1283.Find-the-Smallest-Divisor-Given-a-Threshold.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/problems/1283.Find-the-Smallest-Divisor-Given-a-Threshold.html.js"), meta: {"title":"1283 Find the Smallest Divisor Given a Threshold"} }],
 ]);
 
 if (import.meta.webpackHot) {
