@@ -36,6 +36,7 @@ export const routes = Object.fromEntries([
   ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/404.html.js"), meta: {"title":""} }],
   ["/problems/1482.Minimum-Number-of-Days-to-Make-m-Bouquets.html", { loader: () => import(/* webpackChunkName: "problems_1482.Minimum-Number-of-Days-to-Make-m-Bouquets.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/problems/1482.Minimum-Number-of-Days-to-Make-m-Bouquets.html.js"), meta: {"title":"1482 Minimum Number of Days to Make m Bouquets"} }],
   ["/problems/1283.Find-the-Smallest-Divisor-Given-a-Threshold.html", { loader: () => import(/* webpackChunkName: "problems_1283.Find-the-Smallest-Divisor-Given-a-Threshold.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/problems/1283.Find-the-Smallest-Divisor-Given-a-Threshold.html.js"), meta: {"title":"1283 Find the Smallest Divisor Given a Threshold"} }],
+  ["/problems/1011.Capacity-To-Ship-Packages-Within-D-Days.html", { loader: () => import(/* webpackChunkName: "problems_1011.Capacity-To-Ship-Packages-Within-D-Days.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/problems/1011.Capacity-To-Ship-Packages-Within-D-Days.html.js"), meta: {"title":"1011 Capacity To Ship Packages Within D Days"} }],
 ]);
 
 if (import.meta.webpackHot) {
