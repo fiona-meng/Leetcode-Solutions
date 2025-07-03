@@ -41,6 +41,10 @@ export default defineUserConfig({
           '/problems/540.Single-Element-in-a-Sorted-Array.md',
           '/problems/162.Find-Peak-Element.md',
           '/problems/875.Koko-Eating-Bananas.md',
+          '/problems/14.Longest-Common-Prefix.md',
+          '/problems/1903.Largest-Odd-Number-in-String.md',
+          '/problems/151.Reverse-Words-in-a-String.md',
+          '/problems/410.Split-Array-Largest-Sum.md'
         ],
       },
       {
