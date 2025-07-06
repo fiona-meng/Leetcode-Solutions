@@ -46,6 +46,9 @@ export default defineUserConfig({
           '/problems/151.Reverse-Words-in-a-String.md',
           '/problems/410.Split-Array-Largest-Sum.md',
           '/problems/205.Isomorphic-Strings.md',
+          '/problems/242.Valid-Anagram.md',
+          '/problems/796.Rotate-String.md',
+          '/problems/1539.Kth-Missing-Positive-Number.md'
         ],
       },
       {
