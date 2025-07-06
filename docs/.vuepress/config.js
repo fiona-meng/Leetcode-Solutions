@@ -44,7 +44,8 @@ export default defineUserConfig({
           '/problems/14.Longest-Common-Prefix.md',
           '/problems/1903.Largest-Odd-Number-in-String.md',
           '/problems/151.Reverse-Words-in-a-String.md',
-          '/problems/410.Split-Array-Largest-Sum.md'
+          '/problems/410.Split-Array-Largest-Sum.md',
+          '/problems/205.Isomorphic-Strings.md',
         ],
       },
       {
