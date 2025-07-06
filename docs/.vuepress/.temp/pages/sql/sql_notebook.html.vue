@@ -418,6 +418,136 @@ $ End of the string</p>
 <span class="line"><span class="token keyword">INNER</span> <span class="token keyword">JOIN</span> Customers <span class="token keyword">ON</span> Orders<span class="token punctuation">.</span>CustomerID <span class="token operator">=</span> Customers<span class="token punctuation">.</span>CustomerID<span class="token punctuation">)</span></span>
 <span class="line"><span class="token keyword">INNER</span> <span class="token keyword">JOIN</span> Shippers <span class="token keyword">ON</span> Orders<span class="token punctuation">.</span>ShipperID <span class="token operator">=</span> Shippers<span class="token punctuation">.</span>ShipperID<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div><h2 id="left-join" tabindex="-1"><a class="header-anchor" href="#left-join"><span>Left Join</span></a></h2>
+<p>The LEFT JOIN keyword returns all records from the left table (table1), and the matching records from the right table (table2). The result is 0 records from the right side, if there is no match.</p>
+<div class="language-sql line-numbers-mode" data-highlighter="prismjs" data-ext="sql"><pre v-pre><code class="language-sql"><span class="line"><span class="token keyword">SELECT</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span></span>
+<span class="line"><span class="token keyword">FROM</span> table1</span>
+<span class="line"><span class="token keyword">LEFT</span> <span class="token keyword">JOIN</span> table2</span>
+<span class="line"><span class="token keyword">ON</span> table1<span class="token punctuation">.</span>column_name <span class="token operator">=</span> table2<span class="token punctuation">.</span>column_name<span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div><h2 id="right-join" tabindex="-1"><a class="header-anchor" href="#right-join"><span>Right Join</span></a></h2>
+<p>The RIGHT JOIN keyword returns all records from the right table (table2), and the matching records from the left table (table1). The result is 0 records from the left side, if there is no match.</p>
+<div class="language-sql line-numbers-mode" data-highlighter="prismjs" data-ext="sql"><pre v-pre><code class="language-sql"><span class="line"><span class="token keyword">SELECT</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span></span>
+<span class="line"><span class="token keyword">FROM</span> table1</span>
+<span class="line"><span class="token keyword">RIGHT</span> <span class="token keyword">JOIN</span> table2</span>
+<span class="line"><span class="token keyword">ON</span> table1<span class="token punctuation">.</span>column_name <span class="token operator">=</span> table2<span class="token punctuation">.</span>column_name<span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div><h2 id="full-join" tabindex="-1"><a class="header-anchor" href="#full-join"><span>Full Join</span></a></h2>
+<p>The FULL OUTER JOIN keyword returns all records when there is a match in left (table1) or right (table2) table records.</p>
+<p>Tip: FULL OUTER JOIN and FULL JOIN are the same.</p>
+<div class="language-sql line-numbers-mode" data-highlighter="prismjs" data-ext="sql"><pre v-pre><code class="language-sql"><span class="line"><span class="token keyword">SELECT</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span></span>
+<span class="line"><span class="token keyword">FROM</span> table1</span>
+<span class="line"><span class="token keyword">FULL</span> <span class="token keyword">OUTER</span> <span class="token keyword">JOIN</span> table2</span>
+<span class="line"><span class="token keyword">ON</span> table1<span class="token punctuation">.</span>column_name <span class="token operator">=</span> table2<span class="token punctuation">.</span>column_name</span>
+<span class="line"><span class="token keyword">WHERE</span> condition<span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div><h2 id="self-join" tabindex="-1"><a class="header-anchor" href="#self-join"><span>Self Join</span></a></h2>
+<p>The table join itself.</p>
+<div class="language-sql line-numbers-mode" data-highlighter="prismjs" data-ext="sql"><pre v-pre><code class="language-sql"><span class="line"><span class="token keyword">SELECT</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span></span>
+<span class="line"><span class="token keyword">FROM</span> table1 T1<span class="token punctuation">,</span> table1 T2</span>
+<span class="line"><span class="token keyword">WHERE</span> condition<span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div><p>Example:</p>
+<div class="language-sql line-numbers-mode" data-highlighter="prismjs" data-ext="sql"><pre v-pre><code class="language-sql"><span class="line"><span class="token keyword">SELECT</span> A<span class="token punctuation">.</span>CustomerName <span class="token keyword">AS</span> CustomerName1<span class="token punctuation">,</span> B<span class="token punctuation">.</span>CustomerName <span class="token keyword">AS</span> CustomerName2<span class="token punctuation">,</span> A<span class="token punctuation">.</span>City</span>
+<span class="line"><span class="token keyword">FROM</span> Customers A<span class="token punctuation">,</span> Customers B</span>
+<span class="line"><span class="token keyword">WHERE</span> A<span class="token punctuation">.</span>CustomerID <span class="token operator">&lt;></span> B<span class="token punctuation">.</span>CustomerID</span>
+<span class="line"><span class="token operator">AND</span> A<span class="token punctuation">.</span>City <span class="token operator">=</span> B<span class="token punctuation">.</span>City</span>
+<span class="line"><span class="token keyword">ORDER</span> <span class="token keyword">BY</span> A<span class="token punctuation">.</span>City<span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div><h2 id="union" tabindex="-1"><a class="header-anchor" href="#union"><span>Union</span></a></h2>
+<p>Every SELECT statement within UNION must have the same number of columns
+The columns must also have similar data types
+The columns in every SELECT statement must also be in the same order</p>
+<div class="language-sql line-numbers-mode" data-highlighter="prismjs" data-ext="sql"><pre v-pre><code class="language-sql"><span class="line"><span class="token keyword">SELECT</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token keyword">FROM</span> table1</span>
+<span class="line"><span class="token keyword">UNION</span></span>
+<span class="line"><span class="token keyword">SELECT</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token keyword">FROM</span> table2<span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div><h2 id="union-all" tabindex="-1"><a class="header-anchor" href="#union-all"><span>Union All</span></a></h2>
+<p>The UNION operator selects only distinct values by default. To allow duplicate values, use UNION ALL:</p>
+<div class="language-sql line-numbers-mode" data-highlighter="prismjs" data-ext="sql"><pre v-pre><code class="language-sql"><span class="line"><span class="token keyword">SELECT</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token keyword">FROM</span> table1</span>
+<span class="line"><span class="token keyword">UNION</span> <span class="token keyword">ALL</span></span>
+<span class="line"><span class="token keyword">SELECT</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token keyword">FROM</span> table2<span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div><h2 id="group-by" tabindex="-1"><a class="header-anchor" href="#group-by"><span>GROUP BY</span></a></h2>
+<p>The GROUP BY statement is often used with aggregate functions
+(COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns.</p>
+<div class="language-sql line-numbers-mode" data-highlighter="prismjs" data-ext="sql"><pre v-pre><code class="language-sql"><span class="line"><span class="token keyword">SELECT</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span></span>
+<span class="line"><span class="token keyword">FROM</span> table_name</span>
+<span class="line"><span class="token keyword">WHERE</span> condition</span>
+<span class="line"><span class="token keyword">GROUP</span> <span class="token keyword">BY</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span></span>
+<span class="line"><span class="token keyword">ORDER</span> <span class="token keyword">BY</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div><h2 id="having" tabindex="-1"><a class="header-anchor" href="#having"><span>Having</span></a></h2>
+<div class="language-sql line-numbers-mode" data-highlighter="prismjs" data-ext="sql"><pre v-pre><code class="language-sql"><span class="line"><span class="token keyword">SELECT</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span></span>
+<span class="line"><span class="token keyword">FROM</span> table_name</span>
+<span class="line"><span class="token keyword">WHERE</span> condition</span>
+<span class="line"><span class="token keyword">GROUP</span> <span class="token keyword">BY</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span></span>
+<span class="line"><span class="token keyword">HAVING</span> condition</span>
+<span class="line"><span class="token keyword">ORDER</span> <span class="token keyword">BY</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div><h2 id="exists" tabindex="-1"><a class="header-anchor" href="#exists"><span>EXISTS</span></a></h2>
+<p>The EXISTS operator is used to test for the existence of any record in a subquery.</p>
+<p>The EXISTS operator returns TRUE if the subquery returns one or more records.</p>
+<div class="language-sql line-numbers-mode" data-highlighter="prismjs" data-ext="sql"><pre v-pre><code class="language-sql"><span class="line"><span class="token keyword">SELECT</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span></span>
+<span class="line"><span class="token keyword">FROM</span> table_name</span>
+<span class="line"><span class="token keyword">WHERE</span> <span class="token keyword">EXISTS</span></span>
+<span class="line"><span class="token punctuation">(</span><span class="token keyword">SELECT</span> column_name <span class="token keyword">FROM</span> table_name <span class="token keyword">WHERE</span> condition<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div><p>EXISTS does not output or use any data from those columns. It just asks:</p>
+<p>“Did the subquery return anything?”</p>
+<p>EXISTS is a boolean test, not a value comparison.</p>
+<h1 id="any-and-all" tabindex="-1"><a class="header-anchor" href="#any-and-all"><span>ANY and ALL</span></a></h1>
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code v-pre>ANY</code> (or <code v-pre>SOME</code>)</td>
+<td>TRUE if the condition is TRUE for <strong>at least one</strong> value in the subquery</td>
+</tr>
+<tr>
+<td><code v-pre>ALL</code></td>
+<td>TRUE if the condition is TRUE for <strong>every</strong> value in the subquery</td>
+</tr>
+</tbody>
+</table>
+<h2 id="select-into" tabindex="-1"><a class="header-anchor" href="#select-into"><span>SELECT INTO</span></a></h2>
+<p>The SELECT INTO statement copies data from one table into a new table.</p>
+<p>The following SQL statement creates a backup copy of Customers:</p>
+<div class="language-sql line-numbers-mode" data-highlighter="prismjs" data-ext="sql"><pre v-pre><code class="language-sql"><span class="line"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">INTO</span> CustomersBackup2017</span>
+<span class="line"><span class="token keyword">FROM</span> Customers<span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div><h2 id="insert-into-select" tabindex="-1"><a class="header-anchor" href="#insert-into-select"><span>INSERT INTO ... SELECT</span></a></h2>
+<p>Feature |INSERT INTO ... |SELECT SELECT ... INTO
+Purpose |Copies data into an existing table |Creates a new table and inserts data
+Target Table Exists? |✅ Must already exist |❌ Table must not exist yet</p>
+<h2 id="case" tabindex="-1"><a class="header-anchor" href="#case"><span>Case</span></a></h2>
+<div class="language-sql line-numbers-mode" data-highlighter="prismjs" data-ext="sql"><pre v-pre><code class="language-sql"><span class="line"><span class="token keyword">CASE</span></span>
+<span class="line">    <span class="token keyword">WHEN</span> condition1 <span class="token keyword">THEN</span> result1</span>
+<span class="line">    <span class="token keyword">WHEN</span> condition2 <span class="token keyword">THEN</span> result2</span>
+<span class="line">    <span class="token keyword">WHEN</span> conditionN <span class="token keyword">THEN</span> resultN</span>
+<span class="line">    <span class="token keyword">ELSE</span> result</span>
+<span class="line"><span class="token keyword">END</span><span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div><p>Example:</p>
+<div class="language-sql line-numbers-mode" data-highlighter="prismjs" data-ext="sql"><pre v-pre><code class="language-sql"><span class="line"><span class="token keyword">SELECT</span> OrderID<span class="token punctuation">,</span> Quantity<span class="token punctuation">,</span></span>
+<span class="line"><span class="token keyword">CASE</span></span>
+<span class="line">    <span class="token keyword">WHEN</span> Quantity <span class="token operator">></span> <span class="token number">30</span> <span class="token keyword">THEN</span> <span class="token string">'The quantity is greater than 30'</span></span>
+<span class="line">    <span class="token keyword">WHEN</span> Quantity <span class="token operator">=</span> <span class="token number">30</span> <span class="token keyword">THEN</span> <span class="token string">'The quantity is 30'</span></span>
+<span class="line">    <span class="token keyword">ELSE</span> <span class="token string">'The quantity is under 30'</span></span>
+<span class="line"><span class="token keyword">END</span> <span class="token keyword">AS</span> QuantityText</span>
+<span class="line"><span class="token keyword">FROM</span> OrderDetails<span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div><h2 id="ifnull" tabindex="-1"><a class="header-anchor" href="#ifnull"><span>IFNULL</span></a></h2>
+<p>IFNULL is a function used in SQL to handle NULL values. It allows you to return an alternative value when a NULL is encountered.</p>
+<p>Example:</p>
+<div class="language-sql line-numbers-mode" data-highlighter="prismjs" data-ext="sql"><pre v-pre><code class="language-sql"><span class="line"><span class="token keyword">SELECT</span> ProductName<span class="token punctuation">,</span> UnitPrice <span class="token operator">*</span> <span class="token punctuation">(</span>UnitsInStock <span class="token operator">+</span> IFNULL<span class="token punctuation">(</span>UnitsOnOrder<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span>
+<span class="line"><span class="token keyword">FROM</span> Products<span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div></div></template>
 
 

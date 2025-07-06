@@ -2,7 +2,6 @@ export const redirects = JSON.parse("{}")
 
 export const routes = Object.fromEntries([
   ["/", { loader: () => import(/* webpackChunkName: "index.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/index.html.js"), meta: {"title":"Welcome to My LeetCode Solutions"} }],
-  ["/sql/sql_notebook.html", { loader: () => import(/* webpackChunkName: "sql_sql_notebook.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/sql/sql_notebook.html.js"), meta: {"title":"SQL"} }],
   ["/problems/1.Two-Sum.html", { loader: () => import(/* webpackChunkName: "problems_1.Two-Sum.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/problems/1.Two-Sum.html.js"), meta: {"title":"1 Two Sum"} }],
   ["/problems/1011.Capacity-To-Ship-Packages-Within-D-Days.html", { loader: () => import(/* webpackChunkName: "problems_1011.Capacity-To-Ship-Packages-Within-D-Days.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/problems/1011.Capacity-To-Ship-Packages-Within-D-Days.html.js"), meta: {"title":"1011 Capacity To Ship Packages Within D Days"} }],
   ["/problems/118.Pascals-Triangle.html", { loader: () => import(/* webpackChunkName: "problems_118.Pascals-Triangle.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/problems/118.Pascals-Triangle.html.js"), meta: {"title":"118 Pascal's Triangle"} }],
@@ -42,6 +41,7 @@ export const routes = Object.fromEntries([
   ["/problems/81.Search-in-Rotated-Sorted-Array-II.html", { loader: () => import(/* webpackChunkName: "problems_81.Search-in-Rotated-Sorted-Array-II.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/problems/81.Search-in-Rotated-Sorted-Array-II.html.js"), meta: {"title":"81 Search in Rotated Sorted Array II"} }],
   ["/problems/875.Koko-Eating-Bananas.html", { loader: () => import(/* webpackChunkName: "problems_875.Koko-Eating-Bananas.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/problems/875.Koko-Eating-Bananas.html.js"), meta: {"title":"875 Koko Eating Bananas"} }],
   ["/problems/88.Merge-Sorted-Array.html", { loader: () => import(/* webpackChunkName: "problems_88.Merge-Sorted-Array.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/problems/88.Merge-Sorted-Array.html.js"), meta: {"title":""} }],
+  ["/sql/sql_notebook.html", { loader: () => import(/* webpackChunkName: "sql_sql_notebook.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/sql/sql_notebook.html.js"), meta: {"title":"SQL"} }],
   ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"/Users/fionameng/Documents/Leetcode-Solutions/docs/.vuepress/.temp/pages/404.html.js"), meta: {"title":""} }],
 ]);
 

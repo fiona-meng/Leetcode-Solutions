@@ -535,3 +535,182 @@ FROM ((Orders
 INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
 INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID);
 ```
+
+## Left Join
+
+The LEFT JOIN keyword returns all records from the left table (table1), and the matching records from the right table (table2). The result is 0 records from the right side, if there is no match.
+
+```sql
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name;
+```
+
+## Right Join
+
+The RIGHT JOIN keyword returns all records from the right table (table2), and the matching records from the left table (table1). The result is 0 records from the left side, if there is no match.
+
+```sql
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+```
+
+## Full Join
+
+The FULL OUTER JOIN keyword returns all records when there is a match in left (table1) or right (table2) table records.
+
+Tip: FULL OUTER JOIN and FULL JOIN are the same.
+
+```sql
+SELECT column_name(s)
+FROM table1
+FULL OUTER JOIN table2
+ON table1.column_name = table2.column_name
+WHERE condition;
+```
+
+## Self Join
+
+The table join itself.
+
+```sql
+SELECT column_name(s)
+FROM table1 T1, table1 T2
+WHERE condition;
+```
+
+Example:
+
+```sql
+SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+FROM Customers A, Customers B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City
+ORDER BY A.City;
+```
+
+## Union
+
+Every SELECT statement within UNION must have the same number of columns
+The columns must also have similar data types
+The columns in every SELECT statement must also be in the same order
+
+```sql
+SELECT column_name(s) FROM table1
+UNION
+SELECT column_name(s) FROM table2;
+```
+
+## Union All
+
+The UNION operator selects only distinct values by default. To allow duplicate values, use UNION ALL:
+
+```sql
+SELECT column_name(s) FROM table1
+UNION ALL
+SELECT column_name(s) FROM table2;
+```
+
+## GROUP BY
+
+The GROUP BY statement is often used with aggregate functions
+(COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns.
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+ORDER BY column_name(s);
+```
+
+## Having
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+HAVING condition
+ORDER BY column_name(s);
+```
+
+## EXISTS
+
+The EXISTS operator is used to test for the existence of any record in a subquery.
+
+The EXISTS operator returns TRUE if the subquery returns one or more records.
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE EXISTS
+(SELECT column_name FROM table_name WHERE condition);
+```
+
+EXISTS does not output or use any data from those columns. It just asks:
+
+“Did the subquery return anything?”
+
+EXISTS is a boolean test, not a value comparison.
+
+# ANY and ALL
+
+| Keyword           | Meaning                                                                  |
+| ----------------- | ------------------------------------------------------------------------ |
+| `ANY` (or `SOME`) | TRUE if the condition is TRUE for **at least one** value in the subquery |
+| `ALL`             | TRUE if the condition is TRUE for **every** value in the subquery        |
+
+## SELECT INTO
+
+The SELECT INTO statement copies data from one table into a new table.
+
+The following SQL statement creates a backup copy of Customers:
+
+```sql
+SELECT * INTO CustomersBackup2017
+FROM Customers;
+```
+
+## INSERT INTO ... SELECT
+
+Feature |INSERT INTO ... |SELECT SELECT ... INTO
+Purpose |Copies data into an existing table |Creates a new table and inserts data
+Target Table Exists? |✅ Must already exist |❌ Table must not exist yet
+
+## Case
+
+```sql
+CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    WHEN conditionN THEN resultN
+    ELSE result
+END;
+```
+
+Example:
+
+```sql
+SELECT OrderID, Quantity,
+CASE
+    WHEN Quantity > 30 THEN 'The quantity is greater than 30'
+    WHEN Quantity = 30 THEN 'The quantity is 30'
+    ELSE 'The quantity is under 30'
+END AS QuantityText
+FROM OrderDetails;
+```
+
+## IFNULL
+
+IFNULL is a function used in SQL to handle NULL values. It allows you to return an alternative value when a NULL is encountered.
+
+Example:
+
+```sql
+SELECT ProductName, UnitPrice * (UnitsInStock + IFNULL(UnitsOnOrder, 0))
+FROM Products;
+```
