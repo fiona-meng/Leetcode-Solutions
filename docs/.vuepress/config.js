@@ -48,7 +48,9 @@ export default defineUserConfig({
           '/problems/205.Isomorphic-Strings.md',
           '/problems/242.Valid-Anagram.md',
           '/problems/796.Rotate-String.md',
-          '/problems/1539.Kth-Missing-Positive-Number.md'
+          '/problems/1539.Kth-Missing-Positive-Number.md',
+          '/problems/451.Sort-Characters-By-Frequency.md',
+          '/problems/4.Median-of-Two-Sorted-Arrays.md',
         ],
       },
       {
