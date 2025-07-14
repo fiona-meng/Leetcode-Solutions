@@ -51,6 +51,8 @@ export default defineUserConfig({
           '/problems/1539.Kth-Missing-Positive-Number.md',
           '/problems/451.Sort-Characters-By-Frequency.md',
           '/problems/4.Median-of-Two-Sorted-Arrays.md',
+          '/problems/1614.Maximum-Nesting-Depth-of-the-Parentheses.md',
+          '/problems/74.Search-a-2D-Matrix.md',
         ],
       },
       {
